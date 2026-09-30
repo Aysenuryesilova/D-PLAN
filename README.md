@@ -1,56 +1,77 @@
-D-Plan Staj Programı — Vaka Çalışması Raporu
+# 🚀 D-Plan Staj Programı — Vaka Çalışması Raporu
 
-Kategori: Yazılım ve Ürün Geliştirme (Alternatif Vaka · Uygulama Gerektirmez)
-Teslim Tarihi: 4 Ekim 2026
-Format: Markdown / PDF / Doc
+---
 
-NOTE
+> [!NOTE]
+> **Vaka Çalışması Hakkında Genel Yaklaşım:**  
+> Bu döküman, D-Plan kullanıcılarının günlük ve haftalık planlama yaparken yaşadığı **"yoğun-hafif gün dengesizliği ve tükenmişlik (burnout)"** problemine odaklanır. Kullanıcı iradesini ve rızasını (**%100 Human Agency**) merkeze alan **"Görsel Haftalık Tablo (Sürükle-Bırak) + Kullanıcı Onaylı AI Yük Dengeleme"** özelliği tasarlanmış ve teknik olarak kurgulanmıştır.
 
-Vaka Çalışması Hakkında Genel Yaklaşım: Bu döküman, D-Plan kullanıcılarının günlük ve haftalık planlama yaparken yaşadığı "yoğun-hafif gün dengesizliği ve tükenmişlik (burnout)" problemine odaklanır. Kullanıcı iradesini ve rızasını (%100 Human Agency) merkeze alan "Görsel Haftalık Tablo (Sürükle-Bırak) + Kullanıcı Onaylı AI Yük Dengeleme" özelliği tasarlanmış ve teknik olarak kurgulanmıştır.
+---
 
-1. Senaryo & Ürün Bakışı
-💡 Seçilen Özellik: "Haftalık Görsel Tablo & İsteğe Bağlı AI Yük Dengeleyici"
-(a) Problem Tanımı ve Hedef Kitle (2-3 Cümle)
+## 🎯 1. Senaryo & Ürün Bakışı
 
-Problem & İhtiyaç: D-Plan'ı bir iOS cihazım olmadığı için birebir deneyimleyemesem de, genel planlama süreçlerindeki kendi tecrübelerimden yola çıkarak temel bir insan ihtiyacını tespit ettim: Yoğun ve hafif günler arasındaki dengeyi tutturamamak. Kimi günler üst üste yığılan görevler yüzünden tükeniş yaşanırken, kimi günler tamamen boş kalabiliyoruz. Elbette insan bazı günler tam dinlenme ister; ancak aşırı yoğun günlerin yükünü esnekçe diğer günlere yayabilmelidir.
+### 💡 Seçilen Özellik: "Haftalık Görsel Tablo & İsteğe Bağlı AI Yük Dengeleyici"
 
-Çözüm: Bu problemi çözmek için kullanıcıyı merkeze alan, kontrolü insana veren ve kullanıcının rızasıyla çalışan bir Yapay Zeka Yük Dengeleme Mekanizması kurgulanmıştır.
+#### (a) Problem Tanımı ve Hedef Kitle (2-3 Cümle)
+> **Problem & İhtiyaç:** D-Plan'ı bir iOS cihazım olmadığı için birebir deneyimleyemesem de, genel planlama süreçlerindeki kendi tecrübelerimden yola çıkarak temel bir insan ihtiyacını tespit ettim: **Yoğun ve hafif günler arasındaki dengeyi tutturamamak.** Kimi günler üst üste yığılan görevler yüzünden tükeniş yaşanırken, kimi günler tamamen boş kalabiliyoruz. Elbette insan bazı günler tam dinlenme ister; ancak aşırı yoğun günlerin yükünü esnekçe diğer günlere yayabilmelidir.
+> 
+> **Çözüm:** Bu problemi çözmek için kullanıcıyı merkeze alan, kontrolü insana veren ve kullanıcının rızasıyla çalışan bir **Yapay Zeka Yük Dengeleme Mekanizması** kurgulanmıştır.
 
-2. Çözüm Anlatımı & Teknik Tasarım
-(b) Önerinin Çalışma Mantığı ve Arayüz Tasarımı
+---
 
-Çözüm olarak kullanıcıya haftanın günlerini ve görevlerini içeren görsel bir Haftalık Görev Tablosu sunulur. Sistem iki farklı modda esnek kullanım sağlar:
+## 🛠️ 2. Çözüm Anlatımı & Teknik Tasarım
 
-Manuel Mod (Sürükle-Bırak / Drag & Drop): Kullanıcı, yoğun olduğu bir gündeki görev kutucuğunu tutup daha boş veya daha uygun gördüğü başka bir günün altına elle sürükleyip bırakabilir.
-Yapay Zeka Destekli Mod (Kullanıcı Onaylı Dengeleme): Kullanıcı isterse tablonun üstündeki "🤖 AI ile Haftayı Dengele" butonuna basar. Yapay zeka görevlerin sürelerini ve karmaşıklıklarını hesaplayarak yükü günlere eşit ve mantıklı şekilde dağıtan bir taslak sunar. Kullanıcı önerilen bu yeni tabloyu onaylayabilir veya üzerinde elle ince ayar yapabilir.
+### (b) Önerinin Çalışma Mantığı ve Arayüz Tasarımı
 
-TIP
+Çözüm olarak kullanıcıya haftanın günlerini ve görevlerini içeren görsel bir **Haftalık Görev Tablosu** sunulur. Sistem iki farklı modda esnek kullanım sağlar:
 
-Temel Ürün Prensibi: Yapay zeka hiçbir zaman kullanıcıya kural dikte etmez; kontrol %100 insanda kalır.
+1. **🖐️ Manuel Mod (Sürükle-Bırak / Drag & Drop):** Kullanıcı, yoğun olduğu bir gündeki görev kutucuğunu tutup daha boş veya daha uygun gördüğü başka bir günün altına elle sürükleyip bırakabilir.
+2. **🤖 Yapay Zeka Destekli Mod (Kullanıcı Onaylı Dengeleme):** Kullanıcı isterse tablonun üstündeki **"🤖 AI ile Haftayı Dengele"** butonuna basar. Yapay zeka görevlerin sürelerini ve karmaşıklıklarını hesaplayarak yükü günlere eşit ve mantıklı şekilde dağıtan bir taslak sunar. Kullanıcı önerilen bu yeni tabloyu onaylayabilir veya üzerinde elle ince ayar yapabilir.
 
-(b - Devamı) Kod Parçası & Teknik Yapı (React Native / TypeScript)
+> [!TIP]
+> **Temel Ürün Prensibi:** Yapay zeka hiçbir zaman kullanıcıya kural dikte etmez; kontrol %100 insanda kalır.
+
+#### 📊 Kullanıcı ve Sistem Akış Şeması
+```mermaid
+flowchart TD
+    A["👤 Kullanıcı Haftalık Görev Tablosunu Açar"] --> B{"Kullanıcı Tercihi"}
+    B -- "Elle Yönetmek İsterse" --> C["👆 Görev Kutucuğunu İstediği Güne Sürükler\n(Drag & Drop)"]
+    B -- "AI Asistanlığı İsterse" --> D["🤖 'AI ile Haftayı Dengele' Butonuna Basar"]
+    D --> E["📊 AI Günlük Yükleri Dengeler ve Taslak Öneri Sunar"]
+    E --> F{"Kullanıcı Rızası / Onayı"}
+    F -- "Onayla" --> G["✅ Haftalık Plan Güncellenir"]
+    F -- "Düzenle" --> C
+```
+
+---
+
+### 💻 (b - Devamı) Kod Parçası & Teknik Yapı (React Native / TypeScript)
 
 Aşağıdaki bileşen, D-Plan mobil uygulamasında hem manuel sürükle-bırak desteğini hem de kullanıcı rızasıyla çalışan AI dengeleme fonksiyonunu modüler olarak yönetmektedir:
 
-typescript
+```typescript
 // WeeklyPlannerTable.tsx — D-Plan Hybrid Task Planner Component
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+
 interface Task {
   id: string;
   title: string;
   day: 'Pazartesi' | 'Salı' | 'Çarşamba' | 'Perşembe' | 'Cuma';
   estimatedMinutes: number;
 }
+
 export const WeeklyPlannerTable: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+
   // 1. Manuel Sürükle-Bırak İle Görev Taşıma
   const handleManualDragAndDrop = (taskId: string, targetDay: Task['day']) => {
     setTasks(prevTasks =>
       prevTasks.map(task => (task.id === taskId ? { ...task, day: targetDay } : task))
     );
   };
+
   // 2. Kullanıcı Rızası İle AI Destekli Otomatik Yük Dengeleme
   const handleAIBalanceWeeklyLoad = async () => {
     setLoading(true);
@@ -69,6 +90,7 @@ export const WeeklyPlannerTable: React.FC = () => {
       setLoading(false);
     }
   };
+
   return (
     <View style={styles.container}>
       {/* İsteğe Bağlı AI Dengeleme Butonu */}
@@ -83,6 +105,7 @@ export const WeeklyPlannerTable: React.FC = () => {
           <Text style={styles.aiButtonText}>🤖 AI ile Haftayı Dengele (Öneri Al)</Text>
         )}
       </TouchableOpacity>
+
       {/* Görsel Tablo Alanı */}
       <View style={styles.gridContainer}>
         <Text style={styles.infoText}>
@@ -92,6 +115,7 @@ export const WeeklyPlannerTable: React.FC = () => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: { padding: 16, backgroundColor: '#F8F9FA' },
   aiButton: { backgroundColor: '#6C5CE7', padding: 12, borderRadius: 8, alignItems: 'center' },
@@ -99,30 +123,45 @@ const styles = StyleSheet.create({
   gridContainer: { marginTop: 16 },
   infoText: { fontSize: 12, color: '#636E72', fontStyle: 'italic' }
 });
-(c) Yapay Zeka Bu Özellikte Nasıl Rol Alır?
+```
 
-Yapay zeka bu sistemde "Dayatmacı Bir Denetleyici" değil, "Kullanıcı Rızalı Yük Dengeleme Danışmanı" olarak rol alır:
+---
 
-Yük ve Efor Analizi: Haftanın 7 günündeki görevlerin toplam tahmini sürelerini hesaplar.
-Öncelik & Bağımlılık Denetimi: Kullanıcının kilit görevlerini tespit edip ikincil görevleri daha sakin günlere esnetme önerisi hazırlar.
-Kullanıcı İradesine Saygı: AI sadece bir taslak öneri (draft proposal) sunar. Kullanıcı onaylamadığı sürece takvimdeki hiçbir veri otomatik değişmez.
-3. Yapay Zekayı Üretim Sürecinde Nasıl Kullandım?
+### (c) Yapay Zeka Bu Özellikte Nasıl Rol Alır?
 
-Bu vaka çalışmasını hazırlarken yapay zeka araçlarını kopyala-yapıştır olarak değil, sürekli sorgulayıp yönlendirerek (Iterative Steering) kullandım.
+Yapay zeka bu sistemde **"Dayatmacı Bir Denetleyici"** değil, **"Kullanıcı Rızalı Yük Dengeleme Danışmanı"** olarak rol alır:
 
-🔄 Süreç ve Yönlendirme Hikayem:
+1. **📊 Yük ve Efor Analizi:** Haftanın 7 günündeki görevlerin toplam tahmini sürelerini hesaplar.
+2. **⚖️ Öncelik & Bağımlılık Denetimi:** Kullanıcının kilit görevlerini tespit edip ikincil görevleri daha sakin günlere esnetme önerisi hazırlar.
+3. **🤝 Kullanıcı İradesine Saygı:** AI sadece bir **taslak öneri (draft proposal)** sunar. Kullanıcı onaylamadığı sürece takvimdeki hiçbir veri otomatik değişmez.
 
-İlk Başta Gelen Klasik Fikirlerin Reddi:
-Yapay zeka araçlarına ilk soru sorduğumda, piyasada sıkça görülen "hazır kalıp / klasik" fikirler (otomatik bildirimler, otomatik takvim bölücüler vb.) önerildi. Bu önerilerin insan psikolojisini göz ardı ettiğini ve detaylı/boğucu olduğunu fark edip onları kabul etmedim.
+---
 
-İnsan Kontrolü ve Esneklik Dayatması:
-Yapay zekayı şu mantıkla yeniden yönlendirdim: "Böyle şeyler otomatize edilip kullanıcıya zorlanamaz. İnsan kontrolü, duygusu ve esnekliği şarttır. Öyle bir sistem tasarlayalım ki hem görsel tablo üzerinde elle sürükle-bırak yapılabilsin hem de istenirse yapay zekadan dengeleme önerisi alınabilsin."
+## 🤖 3. Yapay Zekayı Üretim Sürecinde Nasıl Kullandım?
 
-Sonuca Ulaşma ve İnce Ayar:
-Bu yönlendirmem sonucunda fikir "Haftalık Görsel Tabloda Sürükle-Bırak + Kullanıcı Onaylı AI Dengeleme" noktasına evrildi. Kod parçası ve teknik mimari de bu insan odaklı felsefe etrafında şekillendirildi.
+Bu vaka çalışmasını hazırlarken yapay zeka araçlarını kopyala-yapıştır olarak değil, **sürekli sorgulayıp yönlendirerek (Iterative Steering)** kullandım.
 
-4. Değerlendirme Kriterleri Özeti
-Ürün Bakışı: Yoğun-hafif gün dengesizliğini tespit edip çözümü kullanıcı iradesini koruyarak tasarladım.
-Çözüm Kalitesi: Görsel tablo, sürükle-bırak mantığı ve TypeScript kod bileşeniyle uygulanabilir bir mimari sundum.
-Yapay Zeka Kullanımı: AI'a hazır kalıp fikirleri kabul ettirmeyip yönlendirerek insan odaklı bir çıktı elde ettim.
-Anlatım: Fikrimi kendi deneyimlerimle birleştirip net, özgün ve düzenli aktardım.
+### 🔄 Süreç ve Yönlendirme Hikayem:
+
+1. **❌ İlk Başta Gelen Klasik Fikirlerin Reddi:**  
+   Yapay zeka araçlarına ilk soru sorduğumda, piyasada sıkça görülen "hazır kalıp / klasik" fikirler (otomatik bildirimler, otomatik takvim bölücüler vb.) önerildi. Bu önerilerin insan psikolojisini göz ardı ettiğini ve detaylı/boğucu olduğunu fark edip **onları kabul etmedim.**
+
+2. **💡 İnsan Kontrolü ve Esneklik Dayatması:**  
+   Yapay zekayı şu mantıkla yeniden yönlendirdim: *"Böyle şeyler otomatize edilip kullanıcıya zorlanamaz. İnsan kontrolü, duygusu ve esnekliği şarttır. Öyle bir sistem tasarlayalım ki hem görsel tablo üzerinde elle sürükle-bırak yapılabilsin hem de istenirse yapay zekadan dengeleme önerisi alınabilsin."*
+
+3. **🎯 Sonuca Ulaşma ve İnce Ayar:**  
+   Bu yönlendirmem sonucunda fikir **"Haftalık Görsel Tabloda Sürükle-Bırak + Kullanıcı Onaylı AI Dengeleme"** noktasına evrildi. Kod parçası ve teknik mimari de bu insan odaklı felsefe etrafında şekillendirildi.
+
+---
+
+## 📑 4. Değerlendirme Kriterleri Özeti
+
+| Kriter | Rapordaki Karşılığı |
+| :--- | :--- |
+| **Ürün Bakışı** | Yoğun-hafif gün dengesizliğini tespit edip çözümü kullanıcı iradesini koruyarak tasarladım. |
+| **Çözüm Kalitesi** | Görsel tablo, sürükle-bırak mantığı ve TypeScript kod bileşeniyle uygulanabilir bir mimari sundum. |
+| **Yapay Zeka Kullanımı** | AI'a hazır kalıp fikirleri kabul ettirmeyip yönlendirerek insan odaklı bir çıktı elde ettim. |
+| **Anlatım** | Fikrimi kendi deneyimlerimle birleştirip net, özgün ve düzenli aktardım. |
+
+---
+*D-Plan Staj Programı için hazırlanmıştır.*
